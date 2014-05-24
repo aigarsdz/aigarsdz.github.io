@@ -5,7 +5,7 @@ title: "Budžeta plānošanas aplikācija"
 
 Viena no manām, iespējams, dīvainākajām rakstura īpašībām ir tā, ka es nekad neesmu piešķīris lielu vērību naudai, kas gadu gaitā nav arī radījusi nekādas liekas problēmas, drīzāk tieši pretēji - samazinājusi stresu, bet pabeidzot augstskolu un nopietni strādājot nu jau vairāk kā pus gadu, esmu sapratis, ka par finansēm tomēr jārūpējas, tāpēc pirms pusotra mēneša sāku lietot [Toshl Finance](https://toshl.com "Toshl Finance - Personal Finance Manager and Expance Tracker") servisu, kas ļauj sekot līdzi ienākumiem un izdevumiem, lai būtu vieglāk kontrolēt savu budžetu.
 
-![Tosh Finance](/public/images/posts/toshl.png)
+![Tosh Finance](/content/images/2014/May/toshl.png)
 
 Jāatzīst, ka agrāk visai skeptiski raudzījos uz šādiem rīkiem, jo man nepatīk neko plānot uz priekšu, veikt pierakstus un piefiksēt, neskatoties uz to, ka mana atmiņa ir briesmīga un 2 minūšu laikā es aizmirsīšu jūsu vārdu, lai arī cik interesants sarunu biedrs jūs būtu. Pēc ilgākas lietošanas savas domas tomēr esmu mainījis.
 

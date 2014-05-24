@@ -9,7 +9,7 @@ Jāatzīst, ka lielu lomu manā absolūta amatiera interesē par fotogrāfiju ir
 
 Intereses par šo jomu vadīts, šad tad mēdzu arī palasīt kādu īsāku vai garāku tekstu vai pat grāmatu par fotogrāfiju vai noskatīties kādu video apmācību, un pirms pāris dienām internetā atradu norādi uz [50% atlaidi Christopher O'Donnel grāmatai "Bokeh: Creating with Shallow Depths"](http://christopherodonnellphotography.com/art-of-bokeh-guide-shallow-depths-landscape-photography/ "Bokeh: Creating with Shallow Depths eBook » Christopher O'Donnell").
 
-<img class="position right responsive" src="/public/images/posts/bokeh-ebook.jpg" alt="Bokeh ebook" style="max-width: 360px;">
+![](/content/images/2014/May/bokeh-ebook.jpg)
 
 Grāmata ir salīdzinoši plāna - tikai 121 lpp - un lielu daļu satura veido attēli, tāpēc tā lasās ļoti ātri. Kā jau var secināt pēc nosaukuma, grāmatā ir aprakstīta autora tehnika bokeh efekta iegūšanai. Atzīšos - man šī bija pirmā dzirdēšana par tādu lietu, un sākumā šķita, ka tas ir vien uzpūstāks nosaukums izplūdušam fonam, bet, izlasot grāmatu, kļūst skaidrs, ka tas ir nedaudz sarežģītāks koncepts.
 

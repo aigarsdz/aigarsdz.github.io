@@ -9,7 +9,7 @@ Kad internets vēl bija zaļš un neizzināts jeb aptuveni pirms gada, manā blo
 
 ### Niks Makdonels "Divpadsmit" (Nick McDonell "Twelve")
 
-<img src="/public/images/posts/twelve.jpg" alt="Twelve" class="position right">
+![](/content/images/2014/May/twelve.jpg)
 
 Šī grāmata lieliski atbilst ļoti specifiskam žanram, kas man nezināmu iemeslu dēļ ir ļoti tuvs. Stāsts kopumā ir visai drūms un traģisks, un visu padara vēl trakāku fakts, ka tā darbība risinās gada jaukāko svētku laikā.
 
@@ -23,7 +23,7 @@ Ir vērts pieminēt, ka pēc tās ir veidota arī 2010. gada filma "Twelve". Dau
 
 ### Džeimss Tvinings "Melnā saule" (James Twining "The Black Sun")
 
-<img src="/public/images/posts/black-sun.jpg" alt="The Black Sun" style="max-width: 267px;" class="position right responsive">
+![](/content/images/2014/May/black-sun.jpg)
 
 Vispār jau laikam ir dīvaini izdalīt vienu grāmatu no veselas sērijas, bet šoreiz es to atļaušos, jo šī, manuprāt ir vislabākā daļa.
 
@@ -35,7 +35,7 @@ Džeimss Tvinings vispār ir mans iecienītākais autors. Viņa stāstus var sal
 
 ### Duglass Prestons un Linkolns Čailds "Lamatas" (Douglas Preston and Lincoln Child "Riptide")
 
-<img src="/public/images/posts/riptide.jpg" alt="Riptide" style="max-width: 267px;" class="position right responsive">
+![](/content/images/2014/May/riptide.jpg)
 
 Vēl viens drūms stāsts manā kolekcijā. Ko nu padarīsi, ja tie ir paši labākie?
 
@@ -47,7 +47,7 @@ Nekad neesmu sapratis, kā iespējams divatā uzrakstīt vienu grāmatu, bet ši
 
 ### Nokss Andersons "Vēstures vēsture"
 
-<img src="/public/images/posts/history.jpg" alt="Twelve" class="position right">
+![](/content/images/2014/May/history.jpg)
 
 Visbeidzot pēdējā grāmata, ko vēlos pieminēt nav no daiļliteratūras kategorijas, bet drīzāk filozofijas darbs, kas izķidā kristietību līdz sīkākajām detaļām.
 

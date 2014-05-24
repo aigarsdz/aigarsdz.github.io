@@ -9,11 +9,11 @@ Ar makiem man nekad nav gājis viegli. Esmu jau laikam izmēģinājis vairākus 
 
 Viendien par to domājot, nolēmu, ka ir pienācis laiks meklēt to vienu vienīgo maku visā pasaulē, kurš radīts tieši manām ikdienas vajadzībām, un nesakiet nu, ka neviens nav uztaisījis tādu modeli, jo vienmēr kaut kur ir produkts, kas spējīgs apmierināt tieši mūsu vajadzības.
 
-![Mans Bellroy maciņš](/public/images/posts/my_wallet_small.jpg)
+![Mans Bellroy maciņš](/content/images/2014/May/my_wallet_small.jpg)
 
 [Bellroy](http://bellroy.com/ "Slim Your Wallet - Slim Leather Wallets by Bellroy") bija pirmais Google piedāvātais meklēšanas rezultāts pēc atslēgvārdiem "slim men wallets". Man ir apnikuši tie maki ar neskaitāmiem nodalījumiem, kuros it kā varot ietilpināt teju visu savu mantu, jo skarbā patiesība ir tāda, ka nevar vis - pārblīvēts maks ne tikai traucē ikvienā kabatā, kurā mēģini to iestūķēt, bet arī izskatās pabriesmīgi, tāpēc Bellroy produkti uzreiz iekrita acīs - tie ir plāni, kvalitatīvi un ar lielisku ideju.
 
-![](/public/images/posts/wallet_small.jpg)
+![](/content/images/2014/May/wallet_small.jpg)
 
 Šis raksts, protams, nav par to, ka esmu iepircis jaunu maku, tas ir par kompāniju, kurai ir ideja un kura šo ideju izpauž savos produktos.
 

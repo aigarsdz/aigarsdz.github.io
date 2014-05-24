@@ -7,7 +7,7 @@ Esmu visai drošs, ka kaut kur futūristiski baltā Šveices laboratorijā ir ve
 
 Kamēr visi nepacietīgi gaida smadzenēs implantējamas mikroshēmas, kas ļaus mums smelt zināšanas pa tiešo no mākoņiem, ir vērts reiz pa reizei atgriezties pie pamatiem un izlasīt kādu rakstu vai grāmatu par elementārām lietām. Viena no tādām grāmatām ir Brandon Hilkert nesen izdotā "[Build a Ruby Gem](http://brandonhilkert.com/books/build-a-ruby-gem/?utm_source=bh-com&utm_medium=web&utm_campaign=launch)", kas stāsta par katram Ruby programmētājam obligātu lietu - Ruby gem izveidi.
 
-![](/public/images/posts/build-a-ruby-gem.jpg)
+![](/content/images/2014/May/build-a-ruby-gem.jpg)
 
 Lai arī es saku "elementārām", grāmata nav tikai īss tutoriālis par gem izveidi, jo tā informācija ir ļoti labi pasniegta oficiālajā pamācībā un būtu absolūti bezjēdzīga grāmatas formā (neviens nestiepsies pēc grāmatas, kad var atvērt interneta pārlūku). Saturs ir daudz bagātāks, sniedzot informāciju par daudzām detaļām, kuras oficiālajā pamācībā nav minētas vai ir paskaidrotas tikai virspusēji. Liela vērība tiek pievērsta stila un struktūras vadlīnijām, kas spēlē svarīgu lomu Ruby pasaulē un ļauj mums uzturēt kārtīgu codebase, kurā pat iesācējam nebūs grūti orientēties.
 

@@ -7,7 +7,7 @@ Uz Ziemassvētkiem biju saņēmis lielisku dāvanu - Deivida Kērkpatrika grāma
 
 Lai nu kā, pagājušonedēļ gadījās ķibele, un es nonācu slimnīcā. Nekā patīkama tajā nav, bet pa šīm 3 dienām, ko tur pavadīju, vēsā mierā izgāju cauri visai grāmatai, un tagad vēlos pastāstīt, ko es domāju par šo literatūras darbu.
 
-![Mans Bellroy maciņš](/public/images/posts/facebook_efekts.jpg)
+![](/content/images/2014/May/facebook_efekts.jpg)
 
 Vispirms jāmin, ka tā nav tikai par Facebook. Autors stāsta gan par citiem sociālajiem tīkliem, gan to vispārīgu attīstību, gan arī (un šis moments man šķiet visinteresantākais) par dažādām personībām, kas ir tā vai savādāk saistītas ar Facebook tapšanu un attīstību, turklāt tā nav tikai tukša biogrāfija, jo mēs uzzinām daudzus faktus, ko Wikipedia neizlasīt.
 

@@ -9,7 +9,7 @@ Tiklīdz tiku pāri noliegšanas fāzei un pieņēmu, ka mirušās austiņas pie
 
 Tā nu prātojot atcerējos, ka pirms kāda laika biju lasījis [Mika Latvja rakstu](http://www.onkulis.com/2013/05/29/sennheiser-cx-400-ii/) par labām in-ear austiņām - [Sennheiser CX 400 II](http://en-uk.sennheiser.com/earphones-headphones-sound-isolating-cx-400-ii).
 
-<img class="position center" src="/public/images/posts/sennheiser.png" alt="Sennheiser CX 400 II">
+![](/content/images/2014/May/sennheiser.png)
 
 Sauciet to par sagadīšanos, jo tieši šis modelis iekš Amazon tirgojas par visai pievilcīgu cenu, un, kas vēl neparastāk, arī piegādes izmaksas izrādījās pavisam normālas (parasti iekš Amazon tās ir briesmīgi augstas).
 

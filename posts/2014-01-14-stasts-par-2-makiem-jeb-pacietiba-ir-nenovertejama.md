@@ -5,7 +5,7 @@ title: "Stāsts par 2 makiem, jeb pacietība ir nenovērtējama"
 
 Nevienam nepatīk gaidīt. Reizēm tā ir briesmīgākā sajūta pasaulē. Bieži vien sanāk pamosties nakts vidū ar perfektu ideju galvā, ko gribas nekavējoties realizēt, bet ir nolādētā nakts un rīt uz darbu. Man nepatīk gaidīt, tomēr varu nosaukt kaudzi gadījumu, kad pacietība ir atmaksājusies ar uzviju.
 
-![Bellroy Card Sleeve and Capsule Minimalist Wallet](/public/images/posts/two-wallets.jpg)
+![Bellroy Card Sleeve and Capsule Minimalist Wallet](/content/images/2014/May/two-wallets.jpg)
 
 Nedaudz vairāk kā pirms diviem mēnešiem nolēmu iegādāties jaunu maku. [Pavasarī rakstīju](http://dzerviniks.lv/note-sleeve-wallet-from-bellroy/ "Note Sleeve Wallet from Bellroy - Aigars Dzerviniks") par lielisku kompāniju sauktu Bellroy, kura ražo dažāda veida makus, no kuras tad arī biju iepircis savu iepriekšējo naudas turētāju. Labākais tajā bija kompaktais izmērs, jo man nevajag neko vairāk par iespēju pārnēsāt savas kartes un reizēm dažas banknotes, tomēr tas nav pats kompaktākais un minimālistiskākais risinājums, kāds pieejams tirgū un būtu spējīgs apmierināt šīs vajadzības, tāpēc nesen nolēmu, ka varētu pamēģināt kaut ko vēl vienkāršāku.
 
