@@ -6,7 +6,7 @@ layout: default
   <article>
     <h2>{{page.title}}</h2>
     <div class="meta">
-      <time>{{ page.date | date_to_string }}</time> | {{page.tags | join: ', '}}
+      <time>{{ page.date | date: 'd M Y' }}</time> | {{page.tags | join: ', '}}
     </div>
 
     {{content}}
