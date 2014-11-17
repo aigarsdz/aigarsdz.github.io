@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<section>
+  <article>
+    <h2>{{page.title}}</h2>
+    <div class="meta">
+      <time>{{ page.date | date_to_string }}</time> | {{page.tags | join: ', '}}
+    </div>
+
+    {{content}}
+  </article>
+</section>

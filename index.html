@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Aigars Dzerviniks</title>
-  </head>
-  <body>
-    <p>Wrong place! Go to <a href="http://dzerviniks.com">dzerviniks.com</a> instead!</p>
-  </body>
-</html>
+---
+layout: default
+title: Home
+---
+
+<section>
+  {% for post in paginator.posts %}
+  <article>
+    <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <div class="meta">
+      <time>{{ post.date | date_to_string }}</time> | {{post.tags | join: ', '}}
+    </div>
+
+    {{post.excerpt}}
+  </article>
+  {% endfor %}
+</section>

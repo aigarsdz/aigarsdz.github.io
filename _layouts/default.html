@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.title == 'Home' %}
+    <meta name="description" content="{{ site.description }}">
+    {% else %}
+    <meta name="description" content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}">
+    {% endif %}
+    <title>{% if title %}{{title}} &middot; {% endif %}{{site.title}}</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic&subset=latin,latin-ext" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{'/assets/css/style.css' | prepend: site.baseurl}}">
+
+    <link rel="alternate" type="application/rss+xml" title="{{site.title}}" href="/feed.xml" />
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="{{site.baseurl}}/"><img src="{{'/assets/images/me.jpg' | prepend: site.baseurl}}" alt="{{site.title}}"></a>
+
+      <h1>{{site.title}}</h1>
+
+      <p>
+        A software writer chosen by destiny to fight against evil bugs and unleash the power of snarkiness upon the internet.
+      </p>
+
+      <nav>
+        <a href="{{site.baseurl}}/"{% if page.title == 'Home' %}class="current"{% endif %}>Home</a>
+      </nav>
+
+      <div>
+        <a href="http://twitter.com/aigarsdz"><i class="fa fa-twitter"></i></a>
+        <a href="http://instagram.com/aigarsdz"><i class="fa fa-instagram"></i></a>
+        <a href="http://github.com/aigarsdz"><i class="fa fa-github"></i></a>
+        <a href="dzerviniks.aigars@outlook.com"><i class="fa fa-envelope"></i></a>
+      </div>
+    </header>
+
+    <main>
+      <div class="clearfix">
+        <a href="#main-header" id="menu-switch"><i class="fa fa-bars"></i></a>
+        <a href="{{site.baseurl}}/">{{site.title}}</a>
+      </div>
+      <div class="{{page.title | downcase | replace: ' ', '-'}}">{{content}}</div>
+
+      <footer>
+        <p>&copy; 2014, Aigars Dzerviniks</p>
+      </footer>
+    </main>
+
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
