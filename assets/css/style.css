@@ -189,6 +189,7 @@ header > div:last-child a {
 }
 
 main {
+  display: block;
   padding-left: 300px;
   position: relative;
 }
