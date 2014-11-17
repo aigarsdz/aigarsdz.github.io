@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('menu-switch').addEventListener('click', function(e) {
-    if (e.currentTarget.getAttribute('href') === '#main-header') {
-      e.currentTarget.setAttribute('href', '#');
+window.addEventListener('popstate', function() {
+  var menuButton = document.getElementById('menu-switch');
+
+  if (/#.*$/.test(location.href)) {
+    if (menuButton.getAttribute('href') === '#main-header') {
+      menuButton.setAttribute('href', '#');
     } else {
-      e.currentTarget.setAttribute('href', '#main-header');
+      menuButton.setAttribute('href', '#main-header');
     }
-  });
+  }
 });
