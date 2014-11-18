@@ -9,6 +9,7 @@ body {
 
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -97,6 +98,8 @@ header {
    */
   header:target { width: 200px; }
   header:target + main { right: -200px; }
+  header:target + main #menu-switch-on { display: none; }
+  header:target + main #menu-switch-off { display: inline-block; }
 }
 
 header a {
@@ -223,19 +226,6 @@ main > div:first-child {
   background-color: rgba(77, 58, 68, 1);
 }
 
-main > div:first-child a,
-main > div:first-child span {
-  display: inline-block;
-  color: white;
-}
-
-main > div:first-child a:last-child {
-  font-size: 1rem;
-  text-decoration: none;
-
-  float: right;
-}
-
 @media screen and (max-width: 628px) {
   main > div:first-child {
     padding: 10px 20px 0;
@@ -243,6 +233,21 @@ main > div:first-child a:last-child {
     overflow: hidden;
   }
 }
+
+main > div:first-child a,
+main > div:first-child span {
+  display: inline-block;
+  color: white;
+}
+
+main > div:first-child > a:last-child {
+  font-size: 1rem;
+  text-decoration: none;
+
+  float: right;
+}
+
+#menu-switch-off { display: none; }
 
 div.home article { margin-bottom: 60px; }
 
