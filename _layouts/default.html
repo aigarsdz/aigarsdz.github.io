@@ -40,7 +40,9 @@
 
     <main>
       <div class="clearfix">
-        <a href="#main-header" id="menu-switch"><i class="fa fa-bars"></i></a>
+        <span id="menu-switch-container">
+          <a href="#main-header" id="menu-switch"><i class="fa fa-bars"></i></a>
+        </span>
         <a href="{{site.baseurl}}/">{{site.title}}</a>
       </div>
       <div class="{{page.title | downcase | replace: ' ', '-'}}">{{content}}</div>

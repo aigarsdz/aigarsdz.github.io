@@ -223,13 +223,16 @@ main > div:first-child {
   background-color: rgba(77, 58, 68, 1);
 }
 
-main > div:first-child a { color: white; }
+main > div:first-child a,
+main > div:first-child span {
+  display: inline-block;
+  color: white;
+}
 
 main > div:first-child a:last-child {
   font-size: 1rem;
   text-decoration: none;
 
-  display: inline-block;
   float: right;
 }
 
