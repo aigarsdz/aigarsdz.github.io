@@ -10,7 +10,7 @@ Paranoja vai nē, bet nevienu vairs nepārsteidz fakts, ka cilvēki ar taisnām 
 
 Absolūti drošākais variants ir izdauzīt kameru laukā 👍 Ko? Tu negribi bojāt datoru, par kuru samaksāji €1000? Pfff, nu labi, tad otrs drošākais variants, kas ir arī vienkāršākais, - aizlīmēt kameru ar izolācijas lentu. Ko? Tu nevēlies aizlīmēt sensoru, pateicoties kuram tiek automātiski regulēts ekrāna spilgtums? Cūcība! Atliek tikai viens - atspējot kameru programmatūras līmenī.
 
-Nesen man radās tieši šāda vajadzība, un, izgūglējot visu internetu, uzgāju [iSight Disabler](http://techslaves.org/isight-disabler/ “iSight Disabler”) skriptu.
+Nesen man radās tieši šāda vajadzība, un, izgūglējot visu internetu, uzgāju [iSight Disabler](http://techslaves.org/isight-disabler/ "iSight Disabler") skriptu.
 
 ![](/assets/images/posts/2014/11/30/iSightDisabler.gif)
 
