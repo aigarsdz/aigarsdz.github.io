@@ -1,7 +1,18 @@
 ---
-layout: post
-title: "iSight kameras atspējošana"
-tags: [Apple, Mac OS, tehnoloģijas]
+layout:         default
+title:          iSight kameras atspējošana
+type:           post
+navigation:     false
+
+excerpt:        Paranoja vai nē, bet nevienu vairs nepārsteidz fakts, ka cilvēki ar taisnām rokām ir spējīgi attālināti piekļūt datora web kamerai un prasmīgākie pat tā, ka zaļā gaismiņa nemaz neieslēdzas.
+categories:     [tehnoloģijas]
+gradient:       3
+image:          header-4.jpg
+details:        false
+
+author:         Aigars Dezrviniks
+bio:            WEB aplikāciju izstrādātājs ar interesi par visām lietām uz pasaules.
+twitter:        "http://twitter.com/aiagrsdz"
 ---
 
 Nespēj rast sev mieru? Jūti, ka kāds tevi nemitīgi vēro? Uztrauc tā zaļā gaismiņa tavā MacBook datorā? Varbūt pienācis laiks atslēgt iSight kameru?
@@ -12,6 +23,6 @@ Absolūti drošākais variants ir izdauzīt kameru laukā 👍 Ko? Tu negribi bo
 
 Nesen man radās tieši šāda vajadzība, un, izgūglējot visu internetu, uzgāju [iSight Disabler](http://techslaves.org/isight-disabler/ “iSight Disabler”) skriptu.
 
-![](/assets/images/posts/2014/11/30/iSightDisabler.gif)
+{% include media-image.html file="iSightDisabler.gif" title="iSight Disabler script" caption="Skripts darbībā" link="http://techslaves.org/isight-disabler/" %}
 
 Kā redzams gifā, skripts piedāvā divas iespējas: iespējot vai atspējot iSight kameru. respektīvi, tas nav brauciens vienā virzienā. Tiklīdz jums radīsies vajadzība pēc kameras, palaidiet skriptu vēlreiz, izvēlieties pirmo opciju un baudiet video pārraides brīnumus!

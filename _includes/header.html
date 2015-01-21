@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ site.description | truncate: 155 }}" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{{ site.description | truncate: 300 }}" />
+    <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:image" content="{{ page.image | prepend: '/images/' | prepend: site.baseurl | prepend: site.url }}" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <meta name="twitter:description" content="{{ site.description | truncate: 200 }}" />
+    <meta name="twitter:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+    <meta name="twitter:image" content="{{ page.image | prepend: '/images/' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta name="twitter:site" content="{{ site.twitter | prepend: '@' }}" />
+
+    <link rel="alternate" href="{{ '/feed.xml' | prepend: site.baseurl }}" type="application/rss+xml" title="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+    <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | prepend: site.baseurl }}" />
+
+    <link rel="stylesheet" href="{{ '/assets/normalize.css' | prepend: site.baseurl }}" />
+    <link rel="stylesheet" href="{{ '/assets/animate.css' | prepend: site.baseurl }}" />
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | prepend: site.baseurl }}" />
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    {% if site.analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', '{{ site.analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+
+  </head>  
+
+  <body>
+
+    <header data-animation="fadeInDownBig">
+      
+      {% if site.title %}<a href="{{ '/' | prepend: site.baseurl }}" title="Back to Homepage" class="logo">{{ site.name }}</a>{% endif %}
+
+      {% assign pages = site.pages | sort: 'date' | where: 'navigation', true %}
+      {% assign posts = site.posts | sort: 'date' | where: 'navigation', true %}
+
+      <button class="toggle">Menu</button>
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | prepend: site.baseurl }}" title="Home">Home</a></li>
+          {% for page in pages %}
+            {% if page.title and page.type != 'home' %}
+              <li><a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+          {% for post in posts %}
+            {% if post.title and post.type != 'home' %}
+              <li><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+
+    </header>

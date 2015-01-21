@@ -1,17 +1,19 @@
 ---
-layout: default
-title: Home
+
+layout:     default
+title:      Dzīve. Tehnoloģijas. Izklaide.
+type:       home
+navigation: true
+
+date:       2015-01-03
+image:      header-5.jpg
+excerpt:    Trīs lietas, par kurām man reizēm patīk iedrukāt kādā interneta resursā, ja ir pareizais noskaņojums un pareizais temats. <a href="/about.html" title="Continue" class="more">Continue</a>
+gradient:   1
+
 ---
 
-<section>
-  {% for post in paginator.posts %}
-  <article>
-    <h2><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
-    <div class="meta">
-      <time>{{ post.date | date_to_string }}</time> | {{post.tags | join: ', '}}
-    </div>
+{% for post in paginator.posts %}
 
-    {{post.excerpt}}
-  </article>
-  {% endfor %}
-</section>
+  {% include summary.html %}
+
+{% endfor %}

@@ -1,0 +1,25 @@
+<div class="media image" data-animation="fadeInUp">
+
+	{% if include.file %}
+		<img src="{{ include.file | prepend: '/images/' | prepend: site.baseurl }}" alt="{{ include.title }}" />
+	{% endif %}
+
+	{% if include.title or include.caption or include.link %}
+		<div class="caption" data-animation="fadeInRightBig">
+		  
+		  {% if include.title %}
+		  	<h4>{{ include.title }}</h4>
+		  {% endif %}
+
+		  {% if include.caption %}
+		  	<p>{{ include.caption }}</p>
+		  {% endif %}
+
+		  {% if include.link %}
+		  	<a href="{{ include.link }}" title="Visit Website" class="icon image">Visit Website</a>
+		  {% endif %}
+
+		</div>
+	{% endif %}
+
+</div>

@@ -1,0 +1,41 @@
+{% if page.author or page.bio or page.twitter or page.facebook or page.google or page.linkedin or page.pinterest or page.flickr or page.dribbble or page.rss %}
+
+  <div class="meta">
+
+    <div class="author" data-animation="fadeInUp">
+                  
+      <span class="title">Written by</span>
+
+      {% if page.author %}<h4>{{ page.author }}</h4>{% endif %}
+      {% if page.bio %}<p>{{ page.bio }}</p>{% endif %}
+
+      {% if page.twitter or page.facebook or page.google or page.linkedin or page.pinterest or page.flickr or page.dribbble or page.rss %}
+        <ul>
+          {% if page.twitter %}<li><a href="{{ page.twitter }}" title="Twitter" class="icon twitter">Twitter</a></li>{% endif %}
+          {% if page.facebook %}<li><a href="{{ page.facebook }}" title="Facebook" class="icon facebook">Facebook</a></li>{% endif %}
+          {% if page.google %}<li><a href="{{ page.google }}" title="Google" class="icon google">Google</a></li>{% endif %}
+          {% if page.linkedin %}<li><a href="{{ page.linkedin }}" title="LinkedIn" class="icon linkedin">LinkedIn</a></li>{% endif %}
+          {% if page.pinterest %}<li><a href="{{ page.pinterest }}" title="Pinterest" class="icon pinterest">Pinterest</a></li>{% endif %}
+          {% if page.flickr %}<li><a href="{{ page.flickr }}" title="Flickr" class="icon flickr">Flickr</a></li>{% endif %}
+          {% if page.dribbble %}<li><a href="{{ page.dribbble }}" title="Dribbble" class="icon dribbble">Dribbble</a></li>{% endif %}
+          {% if page.rss %}<li><a href="{{ page.rss }}" title="RSS" class="icon rss">RSS</a></li>{% endif %}
+        </ul>
+      {% endif %}
+
+    </div>
+
+    <div class="share" data-animation="fadeInUp">
+                  
+      <span class="title">Share</span>
+
+      <ul>
+        <li><a href="https://twitter.com/home?status={{ site.description | truncate: 80 | append: ' ' | append: site.url | append: site.baseurl | append: page.url | uri_escape }}" title="Tweet" class="icon twitter">Tweet</a></li>
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.baseurl | prepend: site.url }}" title="Like" class="icon facebook">Like</a></li>
+        <li><a href="https://plus.google.com/share?url={{ page.url | prepend: site.baseurl | prepend: site.url }}" title="+1" class="icon google">+1</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+{% endif %}
