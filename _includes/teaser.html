@@ -13,10 +13,10 @@
 	{% endif %}
 
 	<section class="teaser gradient-{{ gradient }}" data-animation="fadeInUp">
-	      
+
 		<div class="excerpt">
-	            
-			<span class="title">{{ teaser.content | reading_time_as_i }}</span>
+
+			<span class="title">{{ page.date | date: '%d %B %Y' }}</span>
 
 			{% if teaser.title %}
 				<h1><a href="{{ teaser.url | prepend: site.baseurl }}" title="{{ teaser.title }}">{{ teaser.title }}</a></h1>
