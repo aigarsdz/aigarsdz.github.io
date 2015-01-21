@@ -1,8 +1,8 @@
 {% if page.image %}<div class="overlay" style="background-image: url({{ site.baseurl }}/images/{{ page.image }});" data-parallax="9"></div>{% endif %}
-      
+
 <div class="excerpt">
-        
-	<span class="title">{{ page.content | reading_time_as_i }}</span>
+
+	<span class="title">{{ page.date | date: '%d %B %Y' }}</span>
 
 	{% if page.title %}
 
@@ -11,7 +11,7 @@
 		{% else %}
 			<h1><a href="{{ page.url | prepend: site.baseurl }}" title="{{ page.title }}">{{ page.title }}</a></h1>
 		{% endif %}
-		
+
 	{% endif %}
 
 	<p>{{ page.excerpt | remove: '<p>' | remove: '</p>' }}</p>
@@ -23,7 +23,7 @@
 		{% else %}
 			<span class="meta">Published {{ page.date | date: '%b %-d, %Y' | prepend: '<b>' | append: '</b>' }}</span>
 		{% endif %}
-	
+
 	{% endif %}
 
 </div>
