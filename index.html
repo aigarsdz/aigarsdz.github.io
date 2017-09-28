@@ -1,19 +1,360 @@
----
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-layout:     default
-title:      Dzīve. Tehnoloģijas. Izklaide.
-type:       home
-navigation: true
+  <title>Aigars Dzerviniks</title>
 
-date:       2015-01-03
-image:      header-5.jpg
-excerpt:    Trīs lietas, par kurām man reizēm patīk iedrukāt kādā interneta resursā, ja ir pareizais noskaņojums un pareizais temats. <a href="/about.html" title="Continue" class="more">Continue</a>
-gradient:   1
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700&amp;subset=latin-ext" rel="stylesheet">
 
----
+  <style>
+    body {
+      background-color: whitesmoke;
+      color: #222;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-{% for post in paginator.posts %}
+    main {
+      margin: 0 auto;
+      max-width: 900px;
+      padding: 20px;
+    }
 
-  {% include summary.html %}
+    h1 {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
 
-{% endfor %}
+    .glitch {
+      position: relative;
+    }
+
+    @-webkit-keyframes noise-anim {
+      0% {
+        clip: rect(4px, 9999px, 54px, 0);
+      }
+      5% {
+        clip: rect(96px, 9999px, 12px, 0);
+      }
+      10% {
+        clip: rect(55px, 9999px, 54px, 0);
+      }
+      15% {
+        clip: rect(87px, 9999px, 4px, 0);
+      }
+      20% {
+        clip: rect(60px, 9999px, 59px, 0);
+      }
+      25% {
+        clip: rect(36px, 9999px, 62px, 0);
+      }
+      30% {
+        clip: rect(39px, 9999px, 1px, 0);
+      }
+      35% {
+        clip: rect(69px, 9999px, 52px, 0);
+      }
+      40% {
+        clip: rect(9px, 9999px, 65px, 0);
+      }
+      45% {
+        clip: rect(16px, 9999px, 1px, 0);
+      }
+      50% {
+        clip: rect(96px, 9999px, 62px, 0);
+      }
+      55% {
+        clip: rect(46px, 9999px, 71px, 0);
+      }
+      60% {
+        clip: rect(14px, 9999px, 97px, 0);
+      }
+      65% {
+        clip: rect(8px, 9999px, 13px, 0);
+      }
+      70% {
+        clip: rect(77px, 9999px, 55px, 0);
+      }
+      75% {
+        clip: rect(83px, 9999px, 63px, 0);
+      }
+      80% {
+        clip: rect(59px, 9999px, 58px, 0);
+      }
+      85% {
+        clip: rect(84px, 9999px, 76px, 0);
+      }
+      90% {
+        clip: rect(31px, 9999px, 90px, 0);
+      }
+      95% {
+        clip: rect(47px, 9999px, 52px, 0);
+      }
+      100% {
+        clip: rect(88px, 9999px, 88px, 0);
+      }
+    }
+
+    @keyframes noise-anim {
+      0% {
+        clip: rect(4px, 9999px, 54px, 0);
+      }
+      5% {
+        clip: rect(96px, 9999px, 12px, 0);
+      }
+      10% {
+        clip: rect(55px, 9999px, 54px, 0);
+      }
+      15% {
+        clip: rect(87px, 9999px, 4px, 0);
+      }
+      20% {
+        clip: rect(60px, 9999px, 59px, 0);
+      }
+      25% {
+        clip: rect(36px, 9999px, 62px, 0);
+      }
+      30% {
+        clip: rect(39px, 9999px, 1px, 0);
+      }
+      35% {
+        clip: rect(69px, 9999px, 52px, 0);
+      }
+      40% {
+        clip: rect(9px, 9999px, 65px, 0);
+      }
+      45% {
+        clip: rect(16px, 9999px, 1px, 0);
+      }
+      50% {
+        clip: rect(96px, 9999px, 62px, 0);
+      }
+      55% {
+        clip: rect(46px, 9999px, 71px, 0);
+      }
+      60% {
+        clip: rect(14px, 9999px, 97px, 0);
+      }
+      65% {
+        clip: rect(8px, 9999px, 13px, 0);
+      }
+      70% {
+        clip: rect(77px, 9999px, 55px, 0);
+      }
+      75% {
+        clip: rect(83px, 9999px, 63px, 0);
+      }
+      80% {
+        clip: rect(59px, 9999px, 58px, 0);
+      }
+      85% {
+        clip: rect(84px, 9999px, 76px, 0);
+      }
+      90% {
+        clip: rect(31px, 9999px, 90px, 0);
+      }
+      95% {
+        clip: rect(47px, 9999px, 52px, 0);
+      }
+      100% {
+        clip: rect(88px, 9999px, 88px, 0);
+      }
+    }
+    .glitch:after {
+      -webkit-animation: noise-anim 2s infinite linear alternate-reverse;
+              animation: noise-anim 2s infinite linear alternate-reverse;
+      background: whitesmoke;
+      clip: rect(0, 900px, 0, 0);
+      content: attr(data-text);
+      left: 2px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: -1px 0 red;
+      top: 0;
+    }
+
+    @-webkit-keyframes noise-anim-2 {
+      0% {
+        clip: rect(56px, 9999px, 82px, 0);
+      }
+      5% {
+        clip: rect(62px, 9999px, 65px, 0);
+      }
+      10% {
+        clip: rect(40px, 9999px, 77px, 0);
+      }
+      15% {
+        clip: rect(12px, 9999px, 67px, 0);
+      }
+      20% {
+        clip: rect(73px, 9999px, 82px, 0);
+      }
+      25% {
+        clip: rect(77px, 9999px, 25px, 0);
+      }
+      30% {
+        clip: rect(86px, 9999px, 14px, 0);
+      }
+      35% {
+        clip: rect(9px, 9999px, 29px, 0);
+      }
+      40% {
+        clip: rect(59px, 9999px, 46px, 0);
+      }
+      45% {
+        clip: rect(18px, 9999px, 81px, 0);
+      }
+      50% {
+        clip: rect(94px, 9999px, 47px, 0);
+      }
+      55% {
+        clip: rect(40px, 9999px, 76px, 0);
+      }
+      60% {
+        clip: rect(33px, 9999px, 62px, 0);
+      }
+      65% {
+        clip: rect(93px, 9999px, 28px, 0);
+      }
+      70% {
+        clip: rect(86px, 9999px, 9px, 0);
+      }
+      75% {
+        clip: rect(35px, 9999px, 13px, 0);
+      }
+      80% {
+        clip: rect(76px, 9999px, 20px, 0);
+      }
+      85% {
+        clip: rect(79px, 9999px, 21px, 0);
+      }
+      90% {
+        clip: rect(36px, 9999px, 45px, 0);
+      }
+      95% {
+        clip: rect(100px, 9999px, 11px, 0);
+      }
+      100% {
+        clip: rect(5px, 9999px, 29px, 0);
+      }
+    }
+
+    @keyframes noise-anim-2 {
+      0% {
+        clip: rect(56px, 9999px, 82px, 0);
+      }
+      5% {
+        clip: rect(62px, 9999px, 65px, 0);
+      }
+      10% {
+        clip: rect(40px, 9999px, 77px, 0);
+      }
+      15% {
+        clip: rect(12px, 9999px, 67px, 0);
+      }
+      20% {
+        clip: rect(73px, 9999px, 82px, 0);
+      }
+      25% {
+        clip: rect(77px, 9999px, 25px, 0);
+      }
+      30% {
+        clip: rect(86px, 9999px, 14px, 0);
+      }
+      35% {
+        clip: rect(9px, 9999px, 29px, 0);
+      }
+      40% {
+        clip: rect(59px, 9999px, 46px, 0);
+      }
+      45% {
+        clip: rect(18px, 9999px, 81px, 0);
+      }
+      50% {
+        clip: rect(94px, 9999px, 47px, 0);
+      }
+      55% {
+        clip: rect(40px, 9999px, 76px, 0);
+      }
+      60% {
+        clip: rect(33px, 9999px, 62px, 0);
+      }
+      65% {
+        clip: rect(93px, 9999px, 28px, 0);
+      }
+      70% {
+        clip: rect(86px, 9999px, 9px, 0);
+      }
+      75% {
+        clip: rect(35px, 9999px, 13px, 0);
+      }
+      80% {
+        clip: rect(76px, 9999px, 20px, 0);
+      }
+      85% {
+        clip: rect(79px, 9999px, 21px, 0);
+      }
+      90% {
+        clip: rect(36px, 9999px, 45px, 0);
+      }
+      95% {
+        clip: rect(100px, 9999px, 11px, 0);
+      }
+      100% {
+        clip: rect(5px, 9999px, 29px, 0);
+      }
+    }
+    .glitch:before {
+      -webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;
+              animation: noise-anim-2 3s infinite linear alternate-reverse;
+      background: whitesmoke;
+      clip: rect(0, 900px, 0, 0);
+      color: #222;
+      content: attr(data-text);
+      left: -2px;
+      overflow: hidden;
+      position: absolute;
+      text-shadow: 1px 0 blue;
+      top: 0;
+    }
+
+    .social {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .social a {
+      color: #222;
+          flex-basis: 30px;
+      -ms-flex-preferred-size: 30px;
+    }
+
+    .social a:hover {
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="glitch" data-text="Aigars Dzerviniks">Aigars Dzerviniks</h1>
+    <p class="description">Web developer</p>
+
+    <section class="social">
+      <a href="https://twitter.com/aigarsdz" title="@aigarsdz on Twitter" target="_blank">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/aigarsdz" title="@aigarsdz on GitHub" target="_blank">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/aigarsdz" title="@aigarsdz on Instagram" target="_blank">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+    </section>
+  </main>
+
+  <script src="https://use.fontawesome.com/28fd99f1f0.js"></script>
+</body>
+</html>
