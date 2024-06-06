@@ -21,9 +21,6 @@ jobs:
           npm ci
           npm run build
 
-      - name: Temporary test
-        run: echo ${{ secrets.SECRET_TEST }} > _site/test.txt
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
