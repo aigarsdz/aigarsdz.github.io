@@ -19,6 +19,8 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
+          npm ci --prefix react/csv
+          npm run build --prefix react/csv
           npm run build
 
       - name: Deploy
