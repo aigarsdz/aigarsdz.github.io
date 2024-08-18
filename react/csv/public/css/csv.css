@@ -49,7 +49,7 @@ a {
 
   &:hover,
   &:active {
-    color: hsl(240 5.9% 10%);
+    color: inherit;
   }
 }
 
