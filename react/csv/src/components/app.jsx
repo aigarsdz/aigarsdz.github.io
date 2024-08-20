@@ -25,7 +25,10 @@ function App({ state }) {
 
   const deleteSelectedRows = () => {
     state.deleteSelectedRows()
-    setPage(0)
+
+    if (state.csvContent.data.length <= PAGE_SIZE * page) {
+      setPage(0)
+    }
   }
 
   const downloadCSV = () => {
