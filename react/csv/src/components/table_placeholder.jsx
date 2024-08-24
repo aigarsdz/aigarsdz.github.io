@@ -1,6 +1,8 @@
-function TablePlaceholder({ onClick }) {
+import UploadArea from './upload_area'
+
+function TablePlaceholder() {
   return (
-    <div id="table_placeholder" onClick={ onClick }>
+    <UploadArea id="table_placeholder">
       <svg width="24px" height="24px" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 22V13M12 13L15.5 16.5M12 13L8.5 16.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
         <path
@@ -9,7 +11,7 @@ function TablePlaceholder({ onClick }) {
           strokeLinecap="round"
           strokeLinejoin="round"></path>
       </svg>
-    </div>
+    </UploadArea>
   )
 }
 

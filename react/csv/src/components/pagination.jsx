@@ -1,8 +1,36 @@
-function Pagination({ page, pageCount, onChange }) {
+import { useMemo } from 'react'
+import { useGlobalState } from '../state'
+
+export const PAGE_SIZE = 100
+
+function calculatePageCount(collectionLength) {
+  return Math.ceil(collectionLength / PAGE_SIZE)
+}
+
+function Pagination() {
+  const [page, setPage] = useGlobalState('page')
+  const [csvContent] = useGlobalState('csvContent')
+  const [filteredRows] = useGlobalState('filteredRows')
+  const [filters] = useGlobalState('filters')
+
+  const pageCount = useMemo(() => {
+    const rows = csvContent.data
+
+    if (filters.length > 0) {
+      rows = filteredRows
+    }
+
+    if (rows.length == 0) {
+      return 1
+    }
+
+    return Math.ceil(rows.length / PAGE_SIZE)
+  }, [csvContent, filteredRows])
+
   const changePage = event => {
     const pageNumber = parseInt(event.currentTarget.dataset.targetPage, 10)
 
-    onChange(pageNumber)
+    setPage(pageNumber)
   }
 
   return (
@@ -22,7 +50,7 @@ function Pagination({ page, pageCount, onChange }) {
             <path d="M15 6L9 12L15 18" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
           </svg>
         </button>
-        <button type="button" disabled={ page == pageCount - 1 } data-target-page={ page + 1 } onClick={ changePage }>
+        <button type="button" disabled={ page == pageCount - 1 || pageCount == 1 } data-target-page={ page + 1 } onClick={ changePage }>
           <svg width="15px" height="15px" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 6L15 12L9 18" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
           </svg>

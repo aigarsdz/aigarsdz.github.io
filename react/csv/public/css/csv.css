@@ -30,7 +30,7 @@ body,
 #data_table th,
 #data_table td,
 #pagination_button_block button,
-#menu button {
+#toolbar button {
   background-color: var(--background-colour);
 }
 
@@ -53,13 +53,17 @@ a {
   }
 }
 
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 #root,
 #pagination,
 #pagination_button_block,
 #pagination_button_block button,
-#table_placeholder,
-#menu,
-#menu button,
+#table_placeholder .upload-area-trigger,
+#toolbar,
+#toolbar button,
 .row-selector {
   display: flex;
 }
@@ -69,27 +73,28 @@ a {
   overflow: hidden;
 }
 
-#file_upload_field {
+.file-upload-field {
   display: none;
 }
 
 #data_table tr,
 #data_table td,
 #pagination_button_block button,
-#menu button {
+#toolbar button {
   transition: background-color 0.3s;
 }
 
 #data_table tr:hover td,
 #pagination_button_block button:not([disabled]):hover,
-#menu button:not([disabled]):hover {
+#toolbar button:not([disabled]):hover {
   background-color: var(--hover-colour);
 }
 
 #data_table,
 #pagination_button_block button,
 #table_placeholder,
-#menu button {
+#toolbar button,
+dialog {
   border: 1px solid var(--border-colour);
 }
 
@@ -99,12 +104,21 @@ a {
   margin: 0 2rem;
 }
 
+#data_table,
+dialog {
+  border-radius: 0.5rem;
+}
+
+#table_placeholder .upload-area-trigger {
+  width: 100%;
+  height: 100%;
+}
+
 #data_table {
   display: block;
   overflow-x: auto;
   white-space: nowrap;
   border-collapse: collapse;
-  border-radius: 0.5rem;
   position: relative;
   font-size: 0.875rem;
 
@@ -119,7 +133,7 @@ a {
     z-index: 2;
   }
 
-  & th {
+  & th:not(.first-column) {
     text-align: left;
     font-weight: 500;
   }
@@ -137,6 +151,7 @@ a {
 .first-column {
   left: 0;
   z-index: 1;
+  text-align: right;
 }
 
 .data-table-header-cell,
@@ -156,15 +171,15 @@ a {
   }
 }
 
-#menu,
+#toolbar,
 #pagination {
   margin: 2rem;
 }
 
 #pagination,
 #pagination_button_block button,
-#table_placeholder,
-#menu button,
+#table_placeholder .upload-area-trigger,
+#toolbar button,
 .row-selector {
   align-items: center;
 }
@@ -180,11 +195,11 @@ a {
 
 #pagination_button_block svg,
 #table_placeholder svg,
-#menu svg {
+#toolbar svg {
   stroke: currentColor;
 }
 
-#menu button,
+#toolbar button,
 #pagination_button_block button {
   border-radius: 6px;
   color: inherit;
@@ -199,8 +214,8 @@ a {
   }
 }
 
-#table_placeholder,
-#menu button {
+#table_placeholder .upload-area-trigger,
+#toolbar button {
   justify-content: center;
 }
 
@@ -208,7 +223,7 @@ a {
   cursor: pointer;
 }
 
-#menu {
+#toolbar {
   gap: 10px;
 
   & button {
