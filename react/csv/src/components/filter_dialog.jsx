@@ -9,7 +9,6 @@ function filterRows(rows, filters) {
 
     for (const filter of filters) {
       filteredRows = filteredRows.filter(field => {
-        console.log(field[filter.field] == filter.value)
         switch (filter.condition) {
           case 'contains': return field[filter.field].includes(filter.value);
           case 'matches': return !!field[filter.field].match(filter.value);
