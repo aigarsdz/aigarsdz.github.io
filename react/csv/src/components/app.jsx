@@ -1,8 +1,9 @@
+import { useGlobalState } from '../state'
 import TablePlaceholder from './table_placeholder'
 import Table from './table'
 import Pagination from './pagination'
 import Toolbar from './toolbar'
-import { useGlobalState } from '../state'
+import FilterDialog from './filter_dialog'
 
 function App() {
   const [csvContent, setCSVContent] = useGlobalState('csvContent')
@@ -27,6 +28,7 @@ function App() {
       }
 
       <Pagination />
+      <FilterDialog />
     </>
   )
 }

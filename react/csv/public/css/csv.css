@@ -29,8 +29,7 @@ body,
 body,
 #data_table th,
 #data_table td,
-#pagination_button_block button,
-#toolbar button {
+button {
   background-color: var(--background-colour);
 }
 
@@ -53,6 +52,19 @@ a {
   }
 }
 
+input[type=text],
+select {
+  padding: 4px 12px;
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+button {
+  border-radius: 6px;
+  color: var(--text-colour);
+  height: 2rem;
+}
+
 ::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -60,11 +72,13 @@ a {
 #root,
 #pagination,
 #pagination_button_block,
-#pagination_button_block button,
 #table_placeholder .upload-area-trigger,
 #toolbar,
-#toolbar button,
-.row-selector {
+button,
+.row-selector,
+.filter-row,
+#filter_dialog_actions,
+.filter-row {
   display: flex;
 }
 
@@ -79,34 +93,38 @@ a {
 
 #data_table tr,
 #data_table td,
-#pagination_button_block button,
-#toolbar button {
+button {
   transition: background-color 0.3s;
 }
 
 #data_table tr:hover td,
-#pagination_button_block button:not([disabled]):hover,
-#toolbar button:not([disabled]):hover {
+button:not([disabled]):not(.filter-remove-button):hover {
   background-color: var(--hover-colour);
 }
 
-#data_table,
-#pagination_button_block button,
 #table_placeholder,
-#toolbar button,
-dialog {
+#data_table_wrapper,
+button:not(.filter-remove-button),
+dialog,
+input[type=text],
+select,
+#applied_filters {
   border: 1px solid var(--border-colour);
 }
 
-#data_table,
+#data_table_wrapper,
 #table_placeholder {
   flex: 1;
   margin: 0 2rem;
 }
 
-#data_table,
-dialog {
-  border-radius: 0.5rem;
+#table_placeholder,
+#data_table_wrapper,
+dialog,
+input[type=text],
+select,
+#applied_filters {
+  border-radius: 6px;
 }
 
 #table_placeholder .upload-area-trigger {
@@ -114,13 +132,16 @@ dialog {
   height: 100%;
 }
 
+#data_table_wrapper {
+  overflow: auto;
+}
+
 #data_table {
-  display: block;
-  overflow-x: auto;
   white-space: nowrap;
   border-collapse: collapse;
   position: relative;
   font-size: 0.875rem;
+  width: 100%;
 
   & thead,
   & .first-column {
@@ -140,6 +161,12 @@ dialog {
 
   & tr + tr {
     border-top: 1px solid var(--border-colour);
+  }
+
+  & td,
+  & th {
+    max-width: 600px;
+    text-wrap: wrap;
   }
 
   & img {
@@ -177,10 +204,10 @@ dialog {
 }
 
 #pagination,
-#pagination_button_block button,
+button,
 #table_placeholder .upload-area-trigger,
-#toolbar button,
-.row-selector {
+.row-selector,
+.filter-row {
   align-items: center;
 }
 
@@ -195,27 +222,23 @@ dialog {
 
 #pagination_button_block svg,
 #table_placeholder svg,
-#toolbar svg {
+#toolbar svg,
+#applied_filters {
   stroke: currentColor;
 }
 
-#toolbar button,
-#pagination_button_block button {
-  border-radius: 6px;
-  color: inherit;
-  height: 2rem;
+#pagination_button_block,
+.filter-row,
+#filter_dialog_actions {
+  gap: 0.5rem;
 }
 
-#pagination_button_block {
-  gap: 0.5rem;
-
-  & button {
-    width: 2rem;
-  }
+#pagination_button_block button {
+  width: 2rem;
 }
 
 #table_placeholder .upload-area-trigger,
-#toolbar button {
+button {
   justify-content: center;
 }
 
@@ -228,5 +251,32 @@ dialog {
 
   & button {
     min-width: 3rem;
+  }
+}
+
+#filter_dialog_actions {
+  margin-top: 20px;
+}
+
+#filter_dialog {
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+}
+
+#applied_filters {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.filter-row {
+  font-size: 0.8rem;
+}
+
+.filter-remove-button {
+  border: none;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
   }
 }

@@ -9,5 +9,6 @@ export const useGlobalState = createState({
   selectedRows: [],
   filteredRows: [],
   filters: [],
+  filterDialogVisible: false,
   page: 0
 })

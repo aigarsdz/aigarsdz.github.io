@@ -38,8 +38,8 @@ function Table() {
   const [csvContent, setCSVContent] = useGlobalState('csvContent')
   const [selectedRows, setSelectedRows] = useGlobalState('selectedRows')
   const [filteredRows, setFilteredRows] = useGlobalState('filteredRows')
-  const [filters] = useGlobalState('filters')
   const [page, setPage] = useGlobalState('page')
+  const [filters] = useGlobalState('filters')
   const [allSelected, setAllSelected] = useState(false)
 
   let data = csvContent.data
@@ -92,46 +92,48 @@ function Table() {
   }, [csvContent.data])
 
   return (
-    <table id="data_table">
-      <thead>
-        <tr>
-          <th className="data-table-header-cell first-column">
-            <input type="checkbox" checked={ allSelected } onChange={ changeAllRowSelectionInPage } />
-          </th>
+    <div id="data_table_wrapper">
+      <table id="data_table">
+        <thead>
+          <tr>
+            <th className="data-table-header-cell first-column">
+              <input type="checkbox" checked={ allSelected } onChange={ changeAllRowSelectionInPage } />
+            </th>
 
-          {csvContent.meta.fields.map(columnName => <th className="data-table-header-cell" key={ `column_name_${columnName}` }>{ columnName }</th>)}
+            {csvContent.meta.fields.map(columnName => <th className="data-table-header-cell" key={ `column_name_${columnName}` }>{ columnName }</th>)}
 
-        </tr>
-      </thead>
-      <tbody>
-        {
-          pageData.map((field, index) => {
-            const rowIndex = index + page * PAGE_SIZE
+          </tr>
+        </thead>
+        <tbody>
+          {
+            pageData.map((field, index) => {
+              const rowIndex = index + page * PAGE_SIZE
 
-            return (
-              <tr key={ `row_${index}` }>
-                <td className="data-table-cell first-column">
-                  <div className="row-selector">
-                    <span>{ index + 1 }</span>
-                    <input type="checkbox" value={ rowIndex } onChange={ changeRowSelection } checked={ selectedRows.indexOf(rowIndex) > -1 } />
-                  </div>
-                </td>
+              return (
+                <tr key={ `row_${index}` }>
+                  <td className="data-table-cell first-column">
+                    <div className="row-selector">
+                      <span>{ index + 1 }</span>
+                      <input type="checkbox" value={ rowIndex } onChange={ changeRowSelection } checked={ selectedRows.indexOf(rowIndex) > -1 } />
+                    </div>
+                  </td>
 
-                {
-                  csvContent.meta.fields.map(columnName => (
-                    <td className="data-table-cell" key={ `column_cell_${columnName}_${index}` }>
-                      { createCellContent(field[columnName]) }
-                    </td>
-                  ))
-                }
+                  {
+                    csvContent.meta.fields.map(columnName => (
+                      <td className="data-table-cell" key={ `column_cell_${columnName}_${index}` }>
+                        { createCellContent(field[columnName]) }
+                      </td>
+                    ))
+                  }
 
-              </tr>
-            )
-          })
-        }
+                </tr>
+              )
+            })
+          }
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   )
 }
 

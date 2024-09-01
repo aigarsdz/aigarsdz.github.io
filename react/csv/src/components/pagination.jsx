@@ -14,7 +14,7 @@ function Pagination() {
   const [filters] = useGlobalState('filters')
 
   const pageCount = useMemo(() => {
-    const rows = csvContent.data
+    let rows = csvContent.data
 
     if (filters.length > 0) {
       rows = filteredRows
