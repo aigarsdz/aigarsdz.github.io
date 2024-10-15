@@ -15,11 +15,11 @@ const IMAGE_EXTENSIONS = [
 ]
 
 function getURLExtension(url) {
-  return url.split(/[#?]/)[0].split('.').pop().trim()
+  return url.split(/[#?]/)[0].split('.').pop()?.trim()
 }
 
 function createCellContent(cellValue) {
-  const trimmedValue = cellValue.trim()
+  const trimmedValue = cellValue?.trim()
 
   if (URL.parse(trimmedValue)) {
     const extension = getURLExtension(trimmedValue)
