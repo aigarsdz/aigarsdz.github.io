@@ -1,8 +1,6 @@
 import Papa from 'papaparse'
 
-export function readFileFromInput(changeEvent) {
-  const file = changeEvent.target.files[0]
-
+function readFileContent(file) {
   return new Promise((resolve, reject) => {
     if (file) {
       const reader = new FileReader()
@@ -12,8 +10,6 @@ export function readFileFromInput(changeEvent) {
         const csvContent = Papa.parse(fileContent, {
           header: true
         })
-
-        changeEvent.target.value = null
 
         resolve(csvContent)
       }
@@ -25,6 +21,22 @@ export function readFileFromInput(changeEvent) {
       resolve(null)
     }
   })
+}
+
+export function readFileFromInput(changeEvent) {
+  const file = changeEvent.target.files[0]
+
+  changeEvent.target.value = null
+
+  return readFileContent(file)
+}
+
+export function readFileFromDrop(event) {
+  if (event.dataTransfer.files && event.dataTransfer.files.length > 0) {
+    return readFileContent(event.dataTransfer.files[0])
+  }
+
+  return Promise.reject(new Error('A file has not been provided'))
 }
 
 export function exportCSVFile(data) {

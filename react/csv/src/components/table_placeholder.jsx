@@ -1,8 +1,8 @@
-import UploadArea from './upload_area'
+import UploadButton from './upload_button'
 
 function TablePlaceholder() {
   return (
-    <UploadArea id="table_placeholder">
+    <UploadButton id="table_placeholder">
       <svg width="48px" height="48px" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 22V13M12 13L15.5 16.5M12 13L8.5 16.5" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
         <path
@@ -11,7 +11,7 @@ function TablePlaceholder() {
           strokeLinecap="round"
           strokeLinejoin="round"></path>
       </svg>
-    </UploadArea>
+    </UploadButton>
   )
 }
 
