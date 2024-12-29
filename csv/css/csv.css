@@ -72,7 +72,7 @@ button {
 #root,
 #pagination,
 #pagination_button_block,
-#table_placeholder .upload-area-trigger,
+#table_placeholder,
 #toolbar,
 button,
 .row-selector,
@@ -127,9 +127,8 @@ select,
   border-radius: 6px;
 }
 
-#table_placeholder .upload-area-trigger {
-  width: 100%;
-  height: 100%;
+#table_placeholder:hover {
+  background-color: transparent;
 }
 
 #data_table_wrapper {
