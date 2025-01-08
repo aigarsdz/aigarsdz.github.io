@@ -4,5 +4,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('favicon.ico')
   config.addPassthroughCopy('robots.txt')
   config.addPassthroughCopy('csv')
+  config.addPassthroughCopy('json')
   config.ignores.add('react')
+  config.ignores.add('vue')
 }
