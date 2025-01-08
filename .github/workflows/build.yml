@@ -20,7 +20,9 @@ jobs:
         run: |
           npm ci
           npm ci --prefix react/csv
+          npm ci --prefix vue/tricky_json
           npm run build --prefix react/csv
+          npm run build --prefix vue/tricky_json
           npm run build
 
       - name: Deploy
