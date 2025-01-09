@@ -129,12 +129,56 @@ function parseKey(characters) {
 	return result
 }
 
+function parseSingleLineComment(characters) {
+	let character = characters.shift()
+	let nextCharacter = characters.shift()
+
+	if (character != '/' || (character == '/' && nextCharacter != '/')) {
+		characters.unshift(nextCharacter)
+		characters.unshift(character)
+
+		return null
+	}
+
+	while (characters.length > 0) {
+		if (character == '\n' || character == '\r') {
+			break
+		}
+
+		character = characters.shift()
+	}
+}
+
+function parseMultiLineComment(characters) {
+	let character = characters.shift()
+	let nextCharacter = characters.shift()
+
+	if (character != '/' || nextCharacter != '*') {
+		characters.unshift(nextCharacter)
+		characters.unshift(character)
+
+		return null
+	}
+
+	while (characters.length > 0) {
+		if (character == '*' && nextCharacter == '/') {
+			break
+		}
+
+		character = characters.shift()
+		nextCharacter = characters.shift()
+	}
+}
+
 export function tokenize(value) {
 	const characters = value.split('')
 	const tokens = []
 	let token = null
 
 	while (characters.length > 0) {
+		parseSingleLineComment(characters)
+		parseMultiLineComment(characters)
+
 		token = parseString(characters)
 
 		if (token != null) {
