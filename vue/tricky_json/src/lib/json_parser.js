@@ -161,12 +161,12 @@ function parseMultiLineComment(characters) {
 	}
 
 	while (characters.length > 0) {
+		character = nextCharacter
+		nextCharacter = characters.shift()
+
 		if (character == '*' && nextCharacter == '/') {
 			break
 		}
-
-		character = characters.shift()
-		nextCharacter = characters.shift()
 	}
 }
 
