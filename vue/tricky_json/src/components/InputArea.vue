@@ -58,12 +58,14 @@
 </script>
 
 <template>
-	<textarea
-		placeholder="{}"
-		id="input_area"
-		ref="input-area"
-		@keydown="handleKeyDown"
-		@input="event => state.updateInput(event.target.value)"
-		:value="state.input"
-	></textarea>
+	<div id="input_area_wrapper">
+		<textarea
+			placeholder="Input the most broken JSON you can think of!&#10;&#10;For example:&#10;&#10;{&#10;  key: 'value'&#10;&#10;  // A comment"
+			id="input_area"
+			ref="input-area"
+			@keydown="handleKeyDown"
+			@input="event => state.updateInput(event.target.value)"
+			:value="state.input"
+		></textarea>
+	</div>
 </template>

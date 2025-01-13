@@ -5,8 +5,13 @@
 
 <template>
   <main id="page">
-    <header>Tricky JSON parser</header>
+    <header>
+      <h1>Tricky JSON parser</h1>
+    </header>
     <InputArea />
     <OutputArea />
+    <footer>
+      <p>Illustrations from <a href="https://absurd.design/">absurd.design</a></p>
+    </footer>
   </main>
 </template>
