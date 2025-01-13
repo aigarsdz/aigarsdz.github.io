@@ -14,8 +14,12 @@ body,
 	height: 100%;
 }
 
-body {
+body,
+footer p {
 	margin: 0;
+}
+
+body {
 	font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	color: black;
 }
@@ -53,10 +57,15 @@ body,
 }
 
 #page::before,
+#page::after,
+#input_area_wrapper::after {
+	background-size: contain;
+}
+
+#page::before,
 #page::after {
 	width: 400px;
 	height: 400px;
-	background-size: contain;
 	z-index: -1;
 }
 
@@ -110,25 +119,23 @@ footer {
 #input_area,
 #output_area {
 	padding: 20px;
-	resize: none;
+	resize: none;;
 }
 
-#input_area_wrapper {
+#input_area_wrapper,
+#output_area {
 	grid-row: 2;
+}
 
-	&::after {
-		width: 100px;
-		height: 42px;
-		right: -70px;
-		top: 50%;
-		transform: translateY(-50%);
-
-
-		background-image: url(/json/images/arrow.svg);
-		background-size: contain;
-		z-index: 1;
-		pointer-events: none;
-	}
+#input_area_wrapper::after {
+	width: 100px;
+	height: 42px;
+	right: -70px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url(/json/images/arrow.svg);
+	z-index: 1;
+	pointer-events: none;
 }
 
 #input_area {
@@ -137,12 +144,7 @@ footer {
 }
 
 #output_area {
-	grid-row: 2;
 	border-radius: 2% 98% 1% 99% / 98% 3% 97% 2%;
-}
-
-footer p {
-	margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
@@ -190,5 +192,29 @@ footer p {
 
 	#page::after {
 		background-position: 160px 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	#page {
+		&::before {
+			background-image: url(/json/images/tree_of_ideas_inverted.png);
+		}
+
+		&::after {
+			background-image: url(/json/images/result_of_an_idea_inverted.png);
+		}
+	}
+
+	body,
+	#input_area,
+	#output_area {
+		background-color: hsl(218, 8%, 20%);
+		color: white;
+	}
+
+	#input_area,
+	#output_area {
+		border-color: white;
 	}
 }
