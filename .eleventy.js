@@ -5,6 +5,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('robots.txt')
   config.addPassthroughCopy('csv')
   config.addPassthroughCopy('json')
+  config.addPassthroughCopy('public')
   config.ignores.add('react')
   config.ignores.add('vue')
 }
