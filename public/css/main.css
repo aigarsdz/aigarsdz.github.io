@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/public/fonts/GeistMono-regular.woff2') format('woff2');
+}
+
+@keyframes flickering-entrance {
+  to,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 1;
+  }
+  from,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+}
+
+@keyframes text-loading {
+  0 {
+    content: 'Ai@,3SAscAi;9,bT4';
+  }
+  10% {
+    content: 'Aig6?4dSj{qS<7Yh7';
+  }
+  20% {
+    content: 'Aigar73f;[u3^4Lgg';
+  }
+  30% {
+    content: 'Aigars7Yh7+BDs73f;';
+  }
+  50% {
+    content: 'Aigars DzerR6?4dSj';
+  }
+  60% {
+    content: 'Aigars Dzerv;9,bT4';
+  }
+  70% {
+    content: 'Aigars Dzervinj{qS';
+  }
+  80% {
+    content: 'Aigars Dzervini;s';
+  }
+  90% {
+    content: 'Aigars DzervinikT';
+  }
+  100% {
+    content: 'Aigars Dzerviniks';
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body,
+#social_links {
+  display: flex;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 600px;
+  text-wrap: balance;
+}
+
+a {
+  color: #CA385C;
+
+  &:hover {
+    color: #912339;
+  }
+}
+
+#name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  color: transparent;
+
+  &::after {
+    content: '';
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: text-loading 800ms linear forwards;
+  }
+}
+
+#description {
+  animation: flickering-entrance 400ms 400ms linear backwards 1;
+}
+
+#social_links {
+  gap: 16px;
+  animation: flickering-entrance 400ms 600ms linear backwards 1;
+  margin-top: 20px;
+
+  a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    &:hover path {
+      fill: #912339;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  path {
+    transition: fill 0.2s;
+  }
+}
+
+#projects {
+  margin-top: 40px;
+
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+#project_list {
+  animation: flickering-entrance 400ms 800ms linear backwards 1;
+  list-style-type: "\02012  ";
+
+  li {
+    margin-bottom: 6px;
+  }
+}
