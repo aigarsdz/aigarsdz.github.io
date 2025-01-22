@@ -6,7 +6,7 @@
 <template>
   <main id="page">
     <header>
-      <h1>Tricky JSON parser</h1>
+      <h1>Tricky JSON formatter</h1>
     </header>
     <InputArea />
     <OutputArea />

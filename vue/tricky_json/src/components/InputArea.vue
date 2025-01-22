@@ -66,6 +66,7 @@
 			@keydown="handleKeyDown"
 			@input="event => state.updateInput(event.target.value)"
 			:value="state.input"
+			aria-label="Invalid JSON input"
 		></textarea>
 	</div>
 </template>
