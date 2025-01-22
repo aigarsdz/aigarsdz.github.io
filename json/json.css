@@ -196,6 +196,10 @@ footer {
 }
 
 @media (prefers-color-scheme: dark) {
+	::selection {
+		color: hsl(218, 8%, 20%);
+	}
+
 	#page {
 		&::before {
 			background-image: url(/json/images/tree_of_ideas_inverted.png);
