@@ -20,5 +20,8 @@
   "homepage": "https://github.com/aigarsdz/aigarsdz.github.io#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "react-scan": "^0.1.3"
   }
 }
