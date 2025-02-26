@@ -90,14 +90,14 @@ body,
 	&::before {
 		left: 0;
 		top: 0;
-		background-image: url(/json/images/tree_of_ideas.png);
+		background-image: url(/json/images/tree_of_ideas.webp);
 		transform: translateX(-20%) rotate(-20deg);
 	}
 
 	&::after {
 		right: 0;
 		bottom: 0;
-		background-image: url(/json/images/result_of_an_idea.png);
+		background-image: url(/json/images/result_of_an_idea.webp);
 		background-position: 50px 0;
 	}
 }
@@ -202,11 +202,11 @@ footer {
 
 	#page {
 		&::before {
-			background-image: url(/json/images/tree_of_ideas_inverted.png);
+			background-image: url(/json/images/tree_of_ideas_inverted.webp);
 		}
 
 		&::after {
-			background-image: url(/json/images/result_of_an_idea_inverted.png);
+			background-image: url(/json/images/result_of_an_idea_inverted.webp);
 		}
 	}
 
