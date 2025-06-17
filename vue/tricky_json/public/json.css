@@ -38,15 +38,22 @@ a {
 
 body,
 #input_area,
-#output_area {
+#output_area,
+#toolbar {
 	background-color: white;
 }
 
 #page::before,
 #page::after,
-#input_area_wrapper::after {
+#input_area_wrapper::after,
+#toolbar button::before {
 	content: '';
 	position: absolute;
+}
+
+#page::before,
+#page::after,
+#input_area_wrapper::after {
 	display: block;
 	background-repeat: no-repeat;
 }
@@ -76,7 +83,9 @@ body,
 }
 
 #page,
-#input_area_wrapper {
+#input_area_wrapper,
+#toolbar button,
+#toolbar button svg {
 	position: relative;
 }
 
@@ -111,15 +120,19 @@ header {
 }
 
 header,
-footer {
+footer,
+#toolbar button {
 	text-align: center;
+}
+
+header,
+footer {
 	grid-column: 1 / span 2;
 }
 
 #toolbar {
 	display: inline-flex;
 	gap: 20px;
-	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 	padding: 12px 30px;
 	border-radius: 20px;
@@ -129,12 +142,9 @@ footer {
 		border: none;
 		border-radius: 4px;
 		transition: transform 0.2s ease-out;
-		position: relative;
-		text-align: center;
 		padding: 0;
 
 		svg {
-			position: relative;
 			z-index: 2;
 		}
 
@@ -144,8 +154,6 @@ footer {
 		}
 
 		&::before {
-			content: '';
-			position: absolute;
 			left: 50%;
 			top: 50%;
 			width: 0;
