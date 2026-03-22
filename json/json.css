@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'PuppyLove';
+  font-weight: 700;
+  src: url('/json/fonts/PuppyLove-Regular.woff2') format('woff2'),
+       url('/json/fonts/PuppyLove-Regular.woff') format('woff'),
+       url('/json/fonts/PuppyLove-Regular.ttf')  format('truetype');
+}
+
+html,
+body,
+#app,
+#page,
+#input_area {
+	height: 100%;
+}
+
+body,
+footer p {
+	margin: 0;
+}
+
+body {
+	font-family: system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: black;
+}
+
+a {
+	color: #DE5D83;
+
+	&:hover {
+		color: #CA385C;
+	}
+}
+
+::selection {
+	background-color: #F7D3E0;
+}
+
+body,
+#input_area,
+#output_area,
+#toolbar {
+	background-color: white;
+}
+
+#page::before,
+#page::after,
+#input_area_wrapper::after,
+#toolbar button::before {
+	content: '';
+	position: absolute;
+}
+
+#page::before,
+#page::after,
+#input_area_wrapper::after {
+	display: block;
+	background-repeat: no-repeat;
+}
+
+#page::before,
+#input_area_wrapper::after  {
+	background-position: 0 0;
+}
+
+#page::before,
+#page::after,
+#input_area_wrapper::after {
+	background-size: contain;
+}
+
+#page::before,
+#page::after {
+	width: 400px;
+	height: 400px;
+	z-index: -1;
+}
+
+#page,
+#input_area,
+#output_area {
+	box-sizing: border-box;
+}
+
+#page,
+#input_area_wrapper,
+#toolbar button,
+#toolbar button svg {
+	position: relative;
+}
+
+#page {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	gap: 40px;
+	padding: 20px 60px;
+
+	&::before {
+		left: 0;
+		top: 0;
+		background-image: url(/json/images/tree_of_ideas.webp);
+		transform: translateX(-20%) rotate(-20deg);
+	}
+
+	&::after {
+		right: 0;
+		bottom: 0;
+		background-image: url(/json/images/result_of_an_idea.webp);
+		background-position: 50px 0;
+	}
+}
+
+header {
+	font-family: PuppyLove, system-ui, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+	h1 {
+		font-size: 2.5rem;
+	}
+}
+
+header,
+footer,
+#toolbar button {
+	text-align: center;
+}
+
+header,
+footer {
+	grid-column: 1 / span 2;
+}
+
+#toolbar {
+	display: inline-flex;
+	gap: 20px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	padding: 12px 30px;
+	border-radius: 20px;
+
+	button {
+		background-color: transparent;
+		border: none;
+		border-radius: 4px;
+		transition: transform 0.2s ease-out;
+		padding: 0;
+
+		svg {
+			z-index: 2;
+		}
+
+		path {
+			fill: black;
+			transition: fill 0.2s ease-out;
+		}
+
+		&::before {
+			left: 50%;
+			top: 50%;
+			width: 0;
+			height: 0;
+			background: radial-gradient(circle,hsla(0, 0%, 0%, 0.1) 0%,hsla(100, 100%, 100%, 1.0) 100%);
+			border-radius: 100%;
+			transform: translate(-50%, -50%);
+			transition: width 0.2s ease-out, height 0.2s ease-out;
+			z-index: 1;
+		}
+
+		&:hover {
+			&::before {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+#input_area,
+#output_area {
+	padding: 20px;
+	resize: none;;
+}
+
+#input_area_wrapper,
+#output_area {
+	grid-row: 2;
+}
+
+#input_area_wrapper::after {
+	width: 100px;
+	height: 42px;
+	right: -70px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-image: url(/json/images/arrow.svg);
+	z-index: 1;
+	pointer-events: none;
+}
+
+#input_area {
+	width: 100%;
+	border-radius: 97% 3% 98% 2% / 2% 96% 4% 98%;
+}
+
+#output_area {
+	border-radius: 2% 98% 1% 99% / 98% 3% 97% 2%;
+}
+
+@media screen and (max-width: 1024px) {
+	#page {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr 1fr auto;
+		gap: 20px;
+		padding: 20px;
+	}
+
+	header,
+	footer {
+		grid-column: 1;
+	}
+
+	#input_area_wrapper::after {
+		width: 100px;
+		height: 42px;
+		right: 50%;
+		top: calc(100% - 12px);
+		transform: rotate(90deg) translateY(-100%) scale(0.8);
+	}
+
+	#input_area {
+		border-radius: 99% 1% 99% 1% / 2% 98% 2% 98%;
+	}
+
+	#output_area {
+		grid-row: 3;
+		border-radius: 1% 99% 1% 99% / 98% 3% 97% 2%;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	#page::before {
+		transform: translateX(-40%) rotate(-40deg);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#page::before {
+		transform: translateX(-60%) rotate(-40deg);
+	}
+
+	#page::after {
+		background-position: 160px 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	::selection {
+		color: hsl(218, 8%, 20%);
+	}
+
+	#page {
+		&::before {
+			background-image: url(/json/images/tree_of_ideas_inverted.webp);
+		}
+
+		&::after {
+			background-image: url(/json/images/result_of_an_idea_inverted.webp);
+		}
+	}
+
+	body,
+	#input_area,
+	#output_area {
+		background-color: hsl(218, 8%, 20%);
+		color: white;
+	}
+
+	#input_area,
+	#output_area {
+		border-color: white;
+	}
+}
