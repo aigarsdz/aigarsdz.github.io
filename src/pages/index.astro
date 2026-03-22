@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aigars Dzerviniks is a software developer focused on simplicity and efficiency.">
+---
+import BaseLayout from '../layouts/base_layout.astro'
+---
 
-  <title>Aigars Dzerviniks</title>
+<BaseLayout>
+	<main>
+		<header>
+	    <h1 id="name">Aigars Dzerviniks</h1>
 
-  <link rel="canonical" href="https://aigars.digital">
-  <link rel="stylesheet" type="text/css" href="{{ '/public/css/main.css' | url | version }}">
-</head>
-<body>
-  <main>
-    <header>
-      <h1 id="name">Aigars Dzerviniks</h1>
+	    <p id="description">
+	      A software developer specializing in front-end web development. I prefer simplicity, efficiency and platforms' built-in
+	      features over chasing the latest trends of libraries and tools.
+	    </p>
+	  </header>
 
-      <p id="description">
-        A software developer specializing in front-end web development. I prefer simplicity, efficiency and platforms' built-in
-        features over chasing the latest trends of libraries and tools.
-      </p>
-    </header>
-
-    <section id="social_links">
+	  <section id="social_links">
       <a href="https://twitter.com/aigarsdz" title="@aigarsdz on Twitter" target="_blank">
         <svg fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310">
           <g>
@@ -72,6 +64,5 @@
         </li>
       </ul>
     </section>
-  </main>
-</body>
-</html>
+	</main>
+</BaseLayout>

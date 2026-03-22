@@ -1,2 +1,2 @@
 # aigarsdz.github.io
-My personal page on GitHub
+My personal page on the internet.

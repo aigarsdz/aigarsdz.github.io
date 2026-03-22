@@ -1,24 +1,27 @@
 {
   "name": "aigarsdz.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A personal website",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "dev": "astro dev",
+    "build": "astro build && node ./scripts/formatOutputHTMLFiles.js",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/aigarsdz/aigarsdz.github.io.git"
   },
   "author": "Aigars Dzerviniks",
-  "license": "MIT",
+  "license": "MIT NON-AI",
   "bugs": {
     "url": "https://github.com/aigarsdz/aigarsdz.github.io/issues"
   },
-  "homepage": "https://github.com/aigarsdz/aigarsdz.github.io#readme",
+  "homepage": "https://aigars.digital",
+  "dependencies": {
+    "astro": "^6.0.8"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "oxfmt": "^0.41.0"
   }
 }

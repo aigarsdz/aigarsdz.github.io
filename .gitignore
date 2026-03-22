@@ -1,5 +1,5 @@
-_site/
 .DS_Store
 node_modules
-/csv/
-/json/
+dist/
+.astro/
+public/json/

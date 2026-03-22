@@ -17,7 +17,7 @@ export default defineConfig({
   },
   base: '/json',
   build: {
-    outDir: '../../json',
+    outDir: '../../public/json',
     emptyOutDir: true
   },
 })
