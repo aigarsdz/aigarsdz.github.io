@@ -19,9 +19,9 @@
   },
   "homepage": "https://aigars.digital",
   "dependencies": {
-    "astro": "^6.0.8"
+    "astro": "6.4.6"
   },
   "devDependencies": {
-    "oxfmt": "^0.41.0"
+    "oxfmt": "0.54.0"
   }
 }
