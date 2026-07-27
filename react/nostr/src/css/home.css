@@ -1,0 +1,35 @@
+main {
+	box-sizing: border-box;
+	border: 1px solid oklch(0.51 0.15 24.38);
+}
+
+header {
+	border-bottom: 1px solid oklch(0.51 0.15 24.38);
+	box-sizing: border-box;
+	padding: 10px;
+	display: flex;
+	gap: 10px;
+}
+
+#user_picture {
+	flex: 0 0 200px;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+#username {
+	font-weight: bold;
+}
+
+#nip05_address {
+	font-style: italic;
+	font-size: 0.8rem;
+}
+
+#post_list {
+	max-width: 50%;
+	border-right: 1px solid oklch(0.51 0.15 24.38);
+}

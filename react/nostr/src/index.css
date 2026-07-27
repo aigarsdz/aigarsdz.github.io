@@ -1,0 +1,11 @@
+:root {
+  font-size: calc(1rem + 0.25vw);
+}
+
+body {
+	font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: oklch(0.98 0.01 95.16);
+}
