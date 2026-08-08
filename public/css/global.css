@@ -3,153 +3,159 @@
   src: url('/public/fonts/GeistMono-regular.woff2') format('woff2');
 }
 
-@keyframes flickering-entrance {
-  to,
-  20%,
-  40%,
-  60%,
-  80% {
-    opacity: 1;
-  }
-  from,
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    opacity: 0;
-  }
-}
-
-@keyframes text-loading {
-  0 {
-    content: 'Ai@,3SAscAi;9,bT4';
-  }
-  10% {
-    content: 'Aig6?4dSj{qS<7Yh7';
-  }
-  20% {
-    content: 'Aigar73f;[u3^4Lgg';
-  }
-  30% {
-    content: 'Aigars7Yh7+BDs73f;';
-  }
-  50% {
-    content: 'Aigars DzerR6?4dSj';
-  }
-  60% {
-    content: 'Aigars Dzerv;9,bT4';
-  }
-  70% {
-    content: 'Aigars Dzervinj{qS';
-  }
-  80% {
-    content: 'Aigars Dzervini;s';
-  }
-  90% {
-    content: 'Aigars DzervinikT';
-  }
-  100% {
-    content: 'Aigars Dzerviniks';
-  }
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body,
-#social_links {
-  display: flex;
+@font-face {
+  font-family: 'Whois Mono';
+  src: url('/public/fonts/whois-mono.woff') format('woff');
 }
 
 body {
-  background-color: whitesmoke;
-  font-family: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   margin: 0;
-  align-items: center;
-  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-main {
-  max-width: 600px;
-  text-wrap: balance;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
-@media screen and (max-width: 670px) {
-  main {
-    padding: 40px;
-    box-sizing: border-box;
-  }
+h1 {
+  font-size: 1.476rem;
+}
+
+h2 {
+  font-size: 1.383rem;
+}
+
+h3 {
+  font-size: 1.296rem;
+}
+
+h4 {
+  font-size: 1.215rem;
+}
+
+h5 {
+  font-size: 1.138rem;
+}
+
+h6 {
+  font-size: 1.067rem;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  padding-inline-start: 1lh;
+}
+
+ol li::marker {
+  color: gray;
+  font-family: sans-serif;
+  font-size: 0.833rem;
 }
 
 a {
-  color: #CA385C;
+  color: oklch(0.51 0.15 24.38);
+}
 
-  &:hover {
-    color: #912339;
-  }
+main {
+  max-width: min(90ch, 100% - 4rem);
+  margin-inline: auto;
+  padding-top: 96px;
+  display: grid;
+  grid-template-columns: 100px auto 200px;
+  grid-template-areas: "left_sidebar center right-sidebar";
+  gap: 20px;
+}
+
+::selection {
+  background-color: oklch(0.51 0.15 24.38);
+  color: white;
+}
+
+#introduction {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 3;
 }
 
 #name {
-  font-size: 2rem;
-  text-transform: uppercase;
-  position: relative;
-  color: transparent;
-
-  &::after {
-    content: '';
-    color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: text-loading 800ms linear forwards;
-  }
-}
-
-#description {
-  animation: flickering-entrance 400ms 400ms linear backwards 1;
+  grid-column: center;
 }
 
 #social_links {
-  gap: 16px;
-  animation: flickering-entrance 400ms 600ms linear backwards 1;
-  margin-top: 20px;
-
-  a {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-
-    &:hover path {
-      fill: #912339;
-    }
-  }
-
-  svg {
-    width: 100%;
-    height: auto;
-  }
-
-  path {
-    transition: fill 0.2s;
-  }
+  grid-column: center;
+  display: flex;
+  gap: 10px;
 }
 
+#description {
+  grid-column: center;
+}
+
+#skills,
+#career,
+#projects,
+.home-section-content {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+#skills,
+#career,
 #projects {
   margin-top: 40px;
 
   h2 {
-    font-size: 1rem;
+    grid-column: center;
+    font-size: 1.138rem;
   }
 }
 
+#skill_list,
 #project_list {
-  animation: flickering-entrance 400ms 800ms linear backwards 1;
-  list-style-type: "\02012  ";
+  grid-column: center / right-sidebar;
+}
 
-  li {
-    margin-bottom: 6px;
+.experience {
+  padding-bottom: 10px;
+
+  p {
+    margin: 0;
   }
+
+  & + & {
+    border-top: 1px dotted;
+    padding-top: 10px;
+  }
+
+  .date-interval {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+#projects {
+  margin-bottom: 100px;
+}
+
+.marker-highlight{
+  background: url(/images/brush_8.svg);
+  /*background:  url(https://s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=fbe0e2);*/
+  box-decoration-break: clone;
 }
