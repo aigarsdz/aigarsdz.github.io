@@ -92,10 +92,19 @@ a {
   color: oklch(0.51 0.15 24.38);
 }
 
+pre {
+  background-color: #eee;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  padding: 4px;
+  overflow-x: auto;
+}
+
 main {
   max-width: min(90ch, 100% - 4rem);
   margin-inline: auto;
   padding-top: 96px;
+  padding-bottom: 96px;
   display: grid;
   grid-template-columns: 100px auto 200px;
   grid-template-areas: "left_sidebar center right-sidebar";
@@ -162,6 +171,8 @@ main {
 #navigation {
   grid-column: right-sidebar;
   position: relative;
+  text-align: right;
+  padding-right: 20px;
 
   &::before {
     content: "";
@@ -171,6 +182,14 @@ main {
     background-size: 20px 20px;
     mask: linear-gradient(45deg, transparent 50%, oklch(92.929% 0.02987 12.393 / 70%) 51%);
     z-index: -1;
+  }
+
+  a {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: bold;
+    text-decoration: none;
   }
 }
 
@@ -241,10 +260,6 @@ main {
     font-weight: bold;
     font-size: 0.8rem;
   }
-}
-
-#projects {
-  margin-bottom: 100px;
 }
 
 .marker-highlight{

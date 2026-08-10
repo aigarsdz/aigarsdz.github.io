@@ -1,0 +1,90 @@
+#contact_options,
+.contact-option {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.contact-option + .contact-option {
+	margin-top: 40px;
+}
+
+#pgp_key {
+  grid-column: left_sidebar / center;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 810px) {
+  	grid-column: span 3;
+  	order: 2;
+  }
+}
+
+#email_details {
+	@media screen and (max-width: 810px) {
+  	grid-column: span 3;
+  	order: 1;
+  }
+}
+
+.messenger-description {
+	grid-column: left_sidebar / center;
+	word-break: break-word;
+
+	@media screen and (max-width: 810px) {
+		grid-column: span 3;
+	}
+}
+
+.full-width-messenger-description {
+	grid-column: span 3;
+	clear: both;
+
+	@media screen and (max-width: 810px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.contact-qr-code {
+	background-color: white;
+
+	img {
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+
+	@media screen and (max-width: 810px) {
+		grid-column: left_sidebar / center;
+
+		h2 {
+			display: none;
+		}
+	}
+}
+
+.contact-image {
+	img {
+		border-radius: 4px;
+	}
+}
+
+.contact-id {
+  font-weight: bold;
+}
+
+.email-postfix {
+  display: none;
+}
+
+.messenger-image {
+	width: calc(50% - 10px);
+	float: right;
+	margin: 0 0 20px 20px;
+
+	@media screen and (max-width: 810px) {
+		width: 100%;
+		margin: 0;
+		float: none;
+	}
+}
