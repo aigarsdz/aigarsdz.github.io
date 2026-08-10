@@ -83,7 +83,7 @@ ul {
 }
 
 ol li::marker {
-  color: gray;
+  color: #666;
   font-family: sans-serif;
   font-size: 0.833rem;
 }
@@ -100,6 +100,11 @@ main {
   grid-template-columns: 100px auto 200px;
   grid-template-areas: "left_sidebar center right-sidebar";
   gap: 20px;
+
+  @media screen and (max-width: 810px) {
+    padding-top: 72px;
+    grid-template-columns: 100px auto auto;
+  }
 }
 
 ::selection {
@@ -115,12 +120,20 @@ main {
 
 #name {
   grid-column: center;
+
+  @media screen and (max-width: 810px) {
+    grid-column: span 3;
+  }
 }
 
 #social_links {
   grid-column: center;
   display: flex;
   gap: 10px;
+
+  @media screen and (max-width: 810px) {
+    grid-column: span 3;
+  }
 }
 
 #icon {
@@ -140,6 +153,10 @@ main {
 
 #description {
   grid-column: center;
+
+  @media screen and (max-width: 810px) {
+    grid-column: span 3;
+  }
 }
 
 #navigation {
@@ -174,12 +191,20 @@ main {
   h2 {
     grid-column: center;
     font-size: 1.138rem;
+
+    @media screen and (max-width: 810px) {
+      grid-column: span 3;
+    }
   }
 }
 
 #skill_list,
 #project_list {
   grid-column: center / right-sidebar;
+
+  @media screen and (max-width: 810px) {
+    grid-column: span 3;
+  }
 }
 
 .experience {
@@ -200,6 +225,21 @@ main {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    color: #666;
+  }
+}
+
+.job-details {
+  @media screen and (max-width: 810px) {
+    grid-column: center / right-sidebar;
+  }
+}
+
+.worklpace {
+  em {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.8rem;
   }
 }
 
