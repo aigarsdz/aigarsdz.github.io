@@ -13,6 +13,7 @@
   grid-column: left_sidebar / center;
   display: flex;
   justify-content: center;
+  padding: 5px;
 
   @media screen and (max-width: 810px) {
   	grid-column: span 3;
@@ -43,6 +44,10 @@
 	@media screen and (max-width: 810px) {
 		display: flex;
 		flex-direction: column;
+
+		p {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -86,5 +91,6 @@
 		width: 100%;
 		margin: 0;
 		float: none;
+		order: 4;
 	}
 }
